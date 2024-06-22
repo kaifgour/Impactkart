@@ -1,0 +1,10 @@
+
+node_modules
+
+node_modules/
+
+# Temporary directories
+tmp/
+temp/
+build/
+dist/

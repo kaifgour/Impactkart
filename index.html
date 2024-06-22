@@ -40,21 +40,46 @@
         </div>
       </section>
 
-      <!-- explore Campaigns -->
-       <section class="explore-section">
-        <div class="input-group">
-            <div class="form-outline" data-mdb-input-init>
-              <input type="search" id="form1" class="form-control" />
-              <label class="form-label" for="form1">Search</label>
-            </div>
-            <button type="button" class="btn btn-primary" data-mdb-ripple-init>
-              <i class="fas fa-search"></i>
-            </button>
-          </div>
+      <!-- Search Campaigns -->
+       <section class="search-section">
+        <div class="search-container">
+          <input type="text" placeholder="Search By Campaigns" class="search-bar">
+        </div>
        </section>
 
-
+       <!-- Featured Campaigns -->
+       <section class="featured-section">
+        <div class="heading">Featured Campaigns</div>
+        <div id="card-container">
+          <!-- Cards will be inserted here -->
+        </div>
+        <template id="card-template" class="row">
+          <div class="card col-lg-3 col-md-2">
+            <div class="card-img">
+              <img src="assets/card-img.png" alt="Campaigns">
+            </div>
+            <div class="card-cont">
+              <p>Feed Nature and Protect Gaumatas & Nandis</p>
+              <span class="card-org">By ImpactGuru Foundation</span>
+              <div class="card-metric">
+                <div class="raised">33% Raised</div>
+                <div class="donor">250 Donors</div>
+              </div>
+              <div class="progress-container">
+                <div class="progress-bar" style="width: 70%;"></div>
+              </div>
+              <span class="prod-worth">&#8377; 7,000 worth product raised</span>
+  
+            </div>
+            <hr>
+            <div class="cta-container">
+              <a href="#" class="cta-button">Donate Now</a>
+            </div>
+          </div>
+        </template>
+       </section>
     </main>
+    
     <footer>
       <!-- Footer content -->
     </footer>

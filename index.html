@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IMPACTKART Explore Campaigns</title>
     <link rel="stylesheet" href="css/styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
     </style>
@@ -32,7 +36,7 @@
       </div>
     </header>
     <main>
-        <!-- hero-section -->
+      <!-- hero-section -->
       <section class="hero-section">
         <div class="hero-text">
           <span>Create Your Impact!</span>
@@ -41,22 +45,30 @@
       </section>
 
       <!-- Search Campaigns -->
-       <section class="search-section">
+      <section class="search-section">
         <div class="search-container">
-          <input type="text" placeholder="Search By Campaigns" class="search-bar">
+          <input
+            type="text"
+            placeholder="Search By Campaigns"
+            class="search-bar"
+          />
         </div>
-       </section>
+      </section>
 
-       <!-- Featured Campaigns -->
-       <section class="featured-section">
+      <!-- Featured Campaigns -->
+      <section class="featured-section">
         <div class="heading">Featured Campaigns</div>
+        <div id="card-container">
+          <!-- Cards will be inserted here -->
+        </div>
+        <hr />
         <div id="card-container">
           <!-- Cards will be inserted here -->
         </div>
         <template id="card-template" class="row">
           <div class="card col-lg-3 col-md-2">
             <div class="card-img">
-              <img src="assets/card-img.png" alt="Campaigns">
+              <img src="assets/card-img.png" alt="Campaigns" />
             </div>
             <div class="card-cont">
               <p>Feed Nature and Protect Gaumatas & Nandis</p>
@@ -69,19 +81,89 @@
                 <div class="progress-bar" style="width: 70%;"></div>
               </div>
               <span class="prod-worth">&#8377; 7,000 worth product raised</span>
-  
             </div>
-            <hr>
+            <hr />
             <div class="cta-container">
               <a href="#" class="cta-button">Donate Now</a>
             </div>
           </div>
         </template>
-       </section>
+      </section>
+      <section class="featured-section">
+        <div class="heading">More Campaigns</div>
+        <div id="card-container2">
+          <!-- Cards will be inserted here -->
+        </div>
+        <template id="card-template2" class="row">
+          <div class="card col-lg-3 col-md-2">
+            <div class="card-img">
+              <img src="assets/card-img.png" alt="Campaigns" />
+            </div>
+            <div class="card-cont">
+              <p>Feed Nature and Protect Gaumatas & Nandis</p>
+              <span class="card-org">By ImpactGuru Foundation</span>
+              <div class="card-metric">
+                <div class="raised">33% Raised</div>
+                <div class="donor">250 Donors</div>
+              </div>
+              <div class="progress-container">
+                <div class="progress-bar" style="width: 70%;"></div>
+              </div>
+              <span class="prod-worth">&#8377; 7,000 worth product raised</span>
+            </div>
+            <hr />
+            <div class="cta-container">
+              <a href="#" class="cta-button">Donate Now</a>
+            </div>
+          </div>
+        </template>
+      </section>
     </main>
-    
+
     <footer>
       <!-- Footer content -->
+      <div class="footer-container">
+        <div class="footer-top">
+          <span class="community">Join The Impact Community</span>
+          <div class="subscribe">
+            <input type="email" placeholder="Enter Your Mail Id" />
+            <a href="#" class="sub-btn">Subscribe Now</a>
+          </div>
+        </div>
+        <hr class="border-dot" />
+        <div class="footer-link">
+          <div class="footer-contact">
+            <hr class="border-dot" />
+            <div class="contact">
+              <span>Contact Us: </span>
+              <span><i class="fa fa-phone"></i> 18008912903</span>
+            </div>
+            <div class="social">
+              <span>Follow us: </span>
+              <div class="social-icons">
+                <!-- Icons would be added here -->
+                <i class="fab fa-facebook-f"></i>
+                <i class="fab fa-twitter"></i>
+                <i class="fab fa-instagram"></i>
+                <i class="fab fa-youtube"></i>
+                <i class="fab fa-linkedin-in"></i>
+              </div>
+            </div>
+          </div>
+          <div class="footer-page">
+            <div class="page1">
+              <p>About Us</p>
+              <p>How it Works</p>
+              <p>Blogs</p>
+            </div>
+            <div class="page2">
+              <p>Explore Campaigns</p>
+              <p>Partnership</p>
+              <p>Start a Fundraiser</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </footer>
     <script src="js/main.js"></script>
   </body>

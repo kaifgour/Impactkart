@@ -19,4 +19,16 @@ document.addEventListener('DOMContentLoaded', () => {
       cardContainer.appendChild(newCard);
     }
   });
+document.addEventListener('DOMContentLoaded', () => {
+    const cardContainer = document.getElementById('card-container2');
+    const cardTemplate = document.getElementById('card-template2').content;
+  
+    // Number of cards to repeat
+    const numberOfCards = 3; // Adjust as needed
+  
+    for (let i = 0; i < numberOfCards; i++) {
+      const newCard = cardTemplate.cloneNode(true);
+      cardContainer.appendChild(newCard);
+    }
+  });
   

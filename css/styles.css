@@ -4,6 +4,7 @@
  * Copyright 2011-2024 The Bootstrap Authors
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import "~@fortawesome/fontawesome-free/css/all.min.css";
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11848,7 +11849,8 @@ body {
   font-family: Roboto, sans-serif;
   margin: 0;
   padding: 0;
-  border: 0;
+  width: 100%;
+  box-sizing: border-box; /* Include padding and border in the element's total width and height */
 }
 
 header {
@@ -12036,12 +12038,26 @@ header .hamburger span {
 }
 .featured-section #card-container {
   display: flex;
-  gap: 40px;
+  gap: 30px;
+  justify-content: space-between;
 }
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
   .featured-section #card-container {
     display: block;
     margin: 20px auto;
+    width: auto;
+  }
+}
+.featured-section #card-container2 {
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+}
+@media (max-width: 1024px) {
+  .featured-section #card-container2 {
+    display: block;
+    margin: 20px auto;
+    width: auto;
   }
 }
 .featured-section .card {
@@ -12066,7 +12082,7 @@ header .hamburger span {
   }
 }
 .featured-section .card .cta-container {
-  background: #FF8D08 0% 0% no-repeat padding-box;
+  background: #ff8d08 0% 0% no-repeat padding-box;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
   border-radius: 22px;
   text-align: center;
@@ -12077,7 +12093,7 @@ header .hamburger span {
   text-decoration: none;
   font: normal normal bold 18px/22px Roboto;
   letter-spacing: 0px;
-  color: #FFFFFF;
+  color: #ffffff;
 }
 .featured-section .card hr {
   margin: 11px -12px 20px -12px;
@@ -12118,7 +12134,7 @@ header .hamburger span {
 .featured-section .card .card-cont .card-metric .donor {
   font: normal normal medium 16px/19px Roboto;
   letter-spacing: 0px;
-  color: #AAAAAA;
+  color: #aaaaaa;
 }
 .featured-section .card .card-cont .progress-container {
   height: 4px;
@@ -12139,8 +12155,235 @@ header .hamburger span {
 }
 
 footer {
-  height: 425px;
-  background: #1E3B31 0% 0% no-repeat padding-box;
+  height: 400px;
+  background: #1e3b31 0% 0% no-repeat padding-box;
+}
+@media (max-width: 768px) {
+  footer {
+    height: 640px;
+    width: 100%;
+  }
+}
+footer .footer-container {
+  padding: 0px 117px;
+}
+footer .footer-container .border-dot {
+  border: 1px dashed #C5C5C5;
+}
+@media (max-width: 768px) {
+  footer .footer-container .border-dot {
+    margin: 16px -101px;
+  }
+}
+footer .footer-container .footer-top {
+  display: flex;
+  padding: 45px 0px;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  footer .footer-container .footer-top {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+}
+footer .footer-container .footer-top span {
+  font-style: normal; /* Font style: normal, italic, oblique */
+  font-variant: normal; /* Font variant: normal, small-caps */
+  font-weight: 500; /* Font weight: normal, bold, bolder, lighter, or numerical values (100-900) */
+  font-size: 28px; /* Font size */
+  line-height: 32px; /* Line height */
+  font-family: "Roboto", sans-serif; /* Font family */
+  letter-spacing: 0px;
+  color: #ffe15f;
+}
+@media (max-width: 768px) {
+  footer .footer-container .footer-top span {
+    width: max-content;
+    margin: 15px 0px;
+  }
+}
+@media (max-width: 425px) {
+  footer .footer-container .footer-top span {
+    font-size: 22px;
+  }
+}
+footer .footer-container .footer-top .subscribe {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+@media (max-width: 768px) {
+  footer .footer-container .footer-top .subscribe {
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+  }
+}
+footer .footer-container .footer-top .subscribe input {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border-radius: 25px;
+  font: normal normal normal 18px/30px Roboto;
+  letter-spacing: 0px;
+  color: #aaaaaa;
+  width: 343px;
+  height: 43px;
+  padding: 13px 25px;
+  border: none;
+}
+@media (max-width: 425px) {
+  footer .footer-container .footer-top .subscribe input {
+    width: 280px;
+  }
+}
+footer .footer-container .footer-top .subscribe a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #21936a 0% 0% no-repeat padding-box;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1607843137);
+  border-radius: 25px;
+  font: normal normal bold 20px/30px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+  text-decoration: none;
+  width: 343px;
+  height: 48px;
+  padding: 13px 0px;
+}
+@media (max-width: 425px) {
+  footer .footer-container .footer-top .subscribe a {
+    width: 280px;
+  }
+}
+footer .footer-container .footer-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  footer .footer-container .footer-link {
+    flex-direction: column;
+  }
+}
+footer .footer-container .footer-link .footer-contact {
+  font-style: normal; /* Font style */
+  font-variant: normal; /* Font variant */
+  font-weight: 500; /* Font weight (medium) */
+  font-size: 22px; /* Font size */
+  line-height: 48px; /* Line height */
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+@media (max-width: 768px) {
+  footer .footer-container .footer-link .footer-contact {
+    padding: 0px 30px;
+    font-style: normal; /* Font style */
+    font-variant: normal; /* Font variant */
+    font-weight: 500; /* Font weight (medium) */
+    font-size: 18px; /* Font size */
+    line-height: 48px; /* Line height */
+    font-family: "Roboto", sans-serif;
+    width: 316px;
+    order: 2;
+  }
+}
+@media (min-width: 767px) {
+  footer .footer-container .footer-link .footer-contact .border-dot {
+    display: none;
+  }
+}
+@media (max-width: 768px) {
+  footer .footer-container .footer-link .footer-contact .border-dot {
+    margin: 18px -44px;
+  }
+}
+@media (max-width: 425px) {
+  footer .footer-container .footer-link .footer-contact .border-dot {
+    margin: 18px -20px;
+  }
+}
+footer .footer-container .footer-link .footer-contact .contact span:nth-of-type(2) {
+  font: normal normal medium 18px/48px Roboto;
+  letter-spacing: 0px;
+  color: #ffffff;
+}
+footer .footer-container .footer-link .footer-contact .contact span i {
+  padding: 0px 0px 0px 16px;
+}
+footer .footer-container .footer-link .footer-contact .social {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+footer .footer-container .footer-link .footer-contact .social .social-icons {
+  padding: 0px 0px 0px 16px;
+}
+footer .footer-container .footer-link .footer-contact .social .social-icons i {
+  padding: 0px 2px;
+}
+footer .footer-container .footer-link .footer-page {
+  font-style: normal; /* Font style */
+  font-variant: normal; /* Font variant */
+  font-weight: 500; /* Font weight (medium) */
+  font-size: 20px; /* Font size */
+  line-height: 56px; /* Line height */
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 0px;
+  color: #ffffff;
+  width: 590px;
+}
+@media (max-width: 768px) {
+  footer .footer-container .footer-link .footer-page {
+    display: flex;
+    width: max-content;
+    gap: 85px;
+  }
+}
+@media (max-width: 425px) {
+  footer .footer-container .footer-link .footer-page {
+    gap: 50px;
+  }
+}
+footer .footer-container .footer-link .footer-page .page1 {
+  align-items: center;
+  display: flex;
+  gap: 73px;
+  justify-content: space-evenly;
+}
+@media (max-width: 768px) {
+  footer .footer-container .footer-link .footer-page .page1 {
+    flex-direction: column;
+    gap: 0px;
+    align-items: baseline;
+    font-style: normal; /* Font style */
+    font-variant: normal; /* Font variant */
+    font-weight: 500; /* Font weight (medium) */
+    font-size: 16px; /* Font size */
+    line-height: 48px; /* Line height */
+    font-family: "Roboto", sans-serif;
+  }
+}
+footer .footer-container .footer-link .footer-page .page2 {
+  align-items: center;
+  display: flex;
+  gap: 73px;
+  justify-content: space-evenly;
+}
+@media (max-width: 768px) {
+  footer .footer-container .footer-link .footer-page .page2 {
+    flex-direction: column;
+    gap: 0px;
+    align-items: baseline;
+    font-style: normal; /* Font style */
+    font-variant: normal; /* Font variant */
+    font-weight: 500; /* Font weight (medium) */
+    font-size: 16px; /* Font size */
+    line-height: 48px; /* Line height */
+    font-family: "Roboto", sans-serif;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
